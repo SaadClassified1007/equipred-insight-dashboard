@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
 
-## Project info
+# Equipment Fault Prediction Dashboard
 
-**URL**: https://lovable.dev/projects/530a732e-ef90-460f-a127-8b6da831e5b7
+A modern, responsive dashboard application built with Next.js to visualize and predict equipment faults using machine learning models exposed through a Flask API.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Real-time Dashboard**: View key metrics and model performance at a glance
+- **Interactive Data Visualizations**: Explore feature importance, fault distributions, and correlations
+- **Prediction Interface**: Make real-time predictions for equipment fault detection
+- **Dataset Explorer**: Analyze the underlying dataset with statistics and visualizations
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-**Use Lovable**
+## Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/530a732e-ef90-460f-a127-8b6da831e5b7) and start prompting.
+- Node.js (14.x or higher)
+- Flask API running on http://localhost:5000 (see API Endpoints below)
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## API Endpoints
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The dashboard connects to a Flask API running on `http://localhost:5000` with the following endpoints:
 
-Follow these steps:
+- `GET /api/metrics`: Get model performance metrics
+- `GET /api/visualization-data`: Get data for all visualizations
+- `GET /api/feature-importance`: Get feature importance data
+- `GET /api/correlation-matrix`: Get correlation matrix data
+- `GET /api/fault-distribution`: Get fault distribution data
+- `GET /api/feature-distributions`: Get feature distribution data
+- `POST /api/predict`: Make a prediction with new data
+- `GET /api/sample`: Get a sample from the dataset for prediction testing
+- `GET /api/dataset-summary`: Get a summary of the dataset
+- `GET /api/health`: Health check endpoint
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Technologies Used
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **React**: Frontend library for building user interfaces
+- **React Router**: For navigation between dashboard pages
+- **Axios**: For API requests
+- **Recharts**: For interactive data visualization
+- **Tailwind CSS**: For styling and responsive design
+- **Lucide Icons**: For beautiful, consistent iconography
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Project Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- `/src/components/layout`: Layout components (Dashboard, Sidebar, Header)
+- `/src/components/dashboard`: Reusable dashboard components
+- `/src/pages`: Main dashboard pages
+- `/src/services`: API service for data fetching
+- `/src/utils`: Utility functions for data formatting
 
-**Edit a file directly in GitHub**
+## License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/530a732e-ef90-460f-a127-8b6da831e5b7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT
